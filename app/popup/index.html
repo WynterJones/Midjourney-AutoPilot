@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="/app/popup/style/tailwind2.css" />
+<link rel="stylesheet" href="/app/popup/style/global.css" />
+<link rel="stylesheet" href="/app/popup/style/buttons.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<div class="p-6 w-full min-h-screen text-white" style="background: #222222">
+  <div class="flex items-center space-x-4 mb-4">
+    <img src="/icons/icon128.png" class="w-16" />
+    <div>
+      <h1 class="font-bold text-2xl">Midjourney AutoPilot</h1>
+      <h5 class="font-light text-slate-500">
+        Embark on a Downloading Adventure
+      </h5>
+    </div>
+  </div>
+
+  <div class="flex space-x-3">
+    <div>
+      <p class="font-medium headline text-base">Toggle:</p>
+      <select id="toggle" style="width: 100px">
+        <option value="open">On</option>
+        <option value="closed">Off</option>
+      </select>
+    </div>
+
+    <div class="w-full">
+      <p class="font-medium headline text-base">Folder Name:</p>
+      <input type="text" id="folder" />
+    </div>
+  </div>
+
+  <small class="text-gray-400 text-xs mt-2 block">
+    <strong>Quick heads-up!</strong> All images will be saved to your Chrome
+    Downloads folder. Feel free to include a subfolder name above, and we'll
+    create it if it doesn't exist. Default folder is "MidjourneyAutoPilot" if
+    none set. Happy downloading!
+  </small>
+
+  <div class="flex space-x-3 text-gray-100 mb-1 mt-4">
+    <h2 class="w-full font-bold">Prompt Delay</h2>
+  </div>
+
+  <div class="flex space-x-3">
+    <div class="w-full">
+      <p class="font-medium headline text-xs text-gray-400">Min Seconds:</p>
+      <input type="text" id="promptMin" value="10" />
+    </div>
+    <div class="w-full">
+      <p class="font-medium headline text-xs text-gray-400">Max Minutes:</p>
+      <input type="text" id="promptMax" value="1" />
+    </div>
+  </div>
+
+  <div class="p-3 mt-4 rounded shadow" style="background: #313338">
+    <p class="font-medium headline">
+      Kick off your journey with these easy steps:
+    </p>
+
+    <ul class="my-2 ml-3 space-y-1 text-gray-400">
+      <li>1. Head over to a private channel with the Midjourney bot.</li>
+      <li>2. Add your list of prompts and hit 'Run Automation.'</li>
+      <li>3. Sit back & relax and begin your journey.</li>
+      <li>
+        <strong>Note:</strong> The delay for prompt is random between the
+        mininum seconds and the maximum minutes to make the bot act like a real
+        user.
+        <em
+          >Remember to use this tool at your own risk. Discord does not love
+          user bots, so use with caution.</em
+        >
+      </li>
+    </ul>
+  </div>
+
+  <p class="text-xs text-gray-500 mt-3">
+    Copyright 2023 -
+    <a href="https://wynter.ai" target="_blank" class="text-gray-400 underline">
+      Find More AI Tools @ Wynter.ai
+    </a>
+  </p>
+</div>
+
+<script src="app.js"></script>

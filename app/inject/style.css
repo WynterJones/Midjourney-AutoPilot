@@ -1,0 +1,244 @@
+/*
+ *   Copyright (c) 2023 Wynter Jones
+ *   All rights reserved.
+ */
+
+#midgpt-floating-toolbar {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  box-shadow: 0 0 5px #000;
+  z-index: 99999999;
+  background: #222;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: move;
+  width: 450px;
+  min-height: 100px;
+  z-index: 9999999;
+  font-size: 16px;
+}
+
+.midgpt-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 8px 8px;
+  color: #fff;
+  background: #5864f2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.midgpt-button-stop {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 8px 8px;
+  color: #fff;
+  background: #e13319;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.midgpt-button.disabled {
+  background: #343974;
+  cursor: not-allowed;
+}
+
+.midgpt-button-small {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 6px;
+  color: #fff;
+  background: #4e5058;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#midgpt-logo {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+}
+
+.midgpt-body {
+  padding: 10px 10px;
+}
+
+.midgpt-body label {
+  color: #cacaca;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.midgpt-body input,
+.midgpt-body select,
+.midgpt-body textarea {
+  color: #999;
+  display: block;
+  width: 100%;
+  padding: 4px;
+  font-size: 16px;
+  border: 1px solid #0f0f0f;
+  background: #2e2e2e;
+  border-radius: 4px;
+  word-break: break-all;
+  white-space: pre;
+}
+
+.midgpt-body textarea::-webkit-scrollbar {
+  width: 13px;
+  background: #2e2e2e;
+}
+
+.midgpt-body textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background: #2e2e2e;
+  padding: 2px;
+}
+
+.midgpt-body textarea::-webkit-scrollbar-thumb {
+  background-color: #1e1f22;
+  border-radius: 10px;
+}
+
+.midgpt-body textarea::-webkit-resizer {
+  background: #2e2e2e;
+}
+
+#midgpt-custom-prompt {
+  height: 140px;
+  outline: none;
+  border: none;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  font-family: inherit;
+  padding-left: 1em;
+  overflow: scroll;
+}
+
+.midgpt-estimate {
+  color: #7b7b7b;
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.midgpt-estimate strong,
+.midgpt-note strong {
+  color: #fff;
+}
+
+.midgpt-note {
+  color: #7b7b7b;
+  font-size: 11px;
+  font-weight: 400;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  line-height: 1.4em;
+}
+
+.midgpt-footer {
+  padding: 10px 10px;
+  border-top: 1px solid #3f3f3f;
+}
+
+#midgpt-custom-prompt-list {
+  padding: 10px;
+  background: #222;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+#midgpt-custom-prompt-list p {
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #acacac;
+}
+
+#midgpt-wynter {
+  text-align: center;
+  font-size: 13px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: inline-block;
+  color: #888;
+  text-decoration: underline;
+}
+
+#midgpt-progress-container {
+  width: 100%;
+  height: 20px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  position: relative;
+  border: 1px solid #303030;
+  position: relative;
+}
+
+#midgpt-progress-bar {
+  width: 0;
+  height: 100%;
+  transition: all 0.5s ease;
+  background-color: #5864f2;
+  position: absolute;
+  border-radius: 8px;
+}
+
+.midgpt-progress {
+  padding: 20px 60px;
+  padding-bottom: 10px;
+}
+
+.midgpt-progress-timer {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  font-size: 12px;
+  color: #fff;
+  z-index: 99999;
+}
+
+.midgpt-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.midgpt-progress-text {
+  color: #cacaca;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#midgpt-custom-prompt-wrapper {
+  display: flex;
+  position: relative;
+}
